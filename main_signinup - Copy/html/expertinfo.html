@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Tạo Tài Khoản </title>
+         <!-- Cool Google Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+        <!-- Our stylesheet -->
+        <link rel="stylesheet" type="text/css" href="/css/expertinfo.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+            <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+        
+
+    </head>
+    <body>
+        <div id="content_container">
+            <div id="form_container">
+                <div id="form_header_container">
+                    <h2 id="form_header"> Trở thành đội ngũ chuyên gia đồng hành cùng 432Hz </h2>
+                </div>
+
+                <div id="form_content_container">
+                    <div id="form_content_inner_container">
+                        <div class="section">
+                            <h3 style="color: white;">Thông tin cơ bản</h3>
+                            <input type="email" id="email" placeholder="Email">
+                            <input type="password" id="password" placeholder="Mật khẩu">
+                            <input type="password" id="confirmpassword" placeholder="Điền lại mật khẩu">
+                            <input type="text" id="full_name" placeholder="Họ và Tên">
+                            <select id="gender">
+                                <option value="" disabled selected>Giới tính</option>
+                                <option value="Nam">Nam</option>
+                                <option value="Nữ">Nữ</option>
+                                <option value="Khác">Khác</option>
+                            </select>
+                            <input type="text" id="religious" name="religious" placeholder="Tôn giáo">
+                            <input type="text" id="birthday" name="birthday" placeholder="Sinh Nhật">
+                            <script>
+                                document.addEventListener('DOMContentLoaded', (event) => {
+                                    flatpickr("#birthday");
+                                });
+                                </script>
+                            <select id="position" ></select>
+                            <!-- Tạo một thẻ label để thay thế cho nút chọn tệp -->
+                            <label for="profile_picture" class="custom-file-upload">
+                                Chọn ảnh đại diện
+                            </label>
+                            <!-- Ẩn nút chọn tệp mặc định -->
+                            <input type="file" id="profile_picture" name="profile_picture">
+                        </div>
+                        <div class="section">
+                            <h3 style="color: white;">Thông tin chuyên môn</h3>
+                            <input type="text" id="route_trainning" placeholder="Quá trình đào tạo( Bằng cấp- Trường- Năm)">
+                            <input type="text" id="career_path" placeholder="Kinh nghiệm làm việc( Vị trí- Tên Tổ chức- Mô tả nhiệm vụ)">
+                            <div id="specialization">
+                                <h3>Chuyên môn của bạn (Chọn ô phù hợp)</h3>
+                                <input type="checkbox" id="couple" name="specialization" value="Cặp đôi">
+                                <label for="couple">Cặp đôi</label><br>
+                                <input type="checkbox" id="marriage_family" name="specialization" value="Hôn nhân gia đình">
+                                <label for="marriage_family">Hôn nhân gia đình</label><br>
+                                <input type="checkbox" id="children_teens" name="specialization" value="Trẻ em và thanh thiếu niên">
+                                <label for="children_teens">Trẻ em và thanh thiếu niên</label><br>
+                                <input type="checkbox" id="school_issues" name="specialization" value="Những vấn đề về học đườngs">
+                                <label for="school_issues">Những vấn đề về học đường</label><br>
+                                <input type="checkbox" id="addiction" name="specialization" value="Nghiện chất, game">
+                                <label for="addiction">Nghiện chất, game</label><br>
+                                <input type="checkbox" id="divorce" name="specialization" value="Ly hôn">
+                                <label for="divorce">Ly hôn</label><br>
+                                <input type="checkbox" id="eating_disorders" name="specialization" value="Rối loạn ăn uống">
+                                <label for="eating_disorders">Rối loạn ăn uống</label><br>
+                                <input type="checkbox" id="ptsd" name="specialization" value="Rối loạn sau sang chấn (PTSD)">
+                                <label for="ptsd">Rối loạn sau sang chấn (PTSD)</label><br>
+                                <input type="checkbox" id="org_training" name="specialization" value="Đào tạo tổ chức, nhóm">
+                                <label for="org_training">Đào tạo tổ chức, nhóm</label><br>
+                                <input type="checkbox" id="psych_eval" name="specialization" value="Đánh giá tâm lý">
+                                <label for="psych_eval">Đánh giá tâm lý</label><br>
+                                <input type="checkbox" id="depression" name="specialization" value="Trầm cảm, lo âu, stress">
+                                <label for="depression">Trầm cảm, lo âu, stress</label><br>
+                            </div>
+                            
+                            <div id="method">
+                                <h3>Các liệu pháp bạn thường áp dụng</h3>
+                                <input type="checkbox" id="cognitive_therapy" name="method" value="Trị liệu nhận thức">
+                                <label for="cognitive_therapy">Trị liệu nhận thức</label><br>
+                                <input type="checkbox" id="behavioral_therapy" name="method" value="Trị liệu hành vi">
+                                <label for="behavioral_therapy">Trị liệu hành vi</label><br>
+                                <input type="checkbox" id="cbt" name="method" value="Liệu pháp nhận thức-hành vi ">
+                                <label for="cbt">Liệu pháp nhận thức-hành vi (CBT)</label><br>
+                                <input type="checkbox" id="dbt" name="method" value="Liệu pháp hành vi biện chứng (DBT)">
+                                <label for="dbt">Liệu pháp hành vi biện chứng (DBT)</label><br>
+                                <input type="checkbox" id="act" name="method" value="Liệu pháp chấp nhận và cam kết (ACT)">
+                                <label for="act">Liệu pháp chấp nhận và cam kết (ACT)</label><br>
+                                <input type="checkbox" id="contact_therapy" name="method" value="Liệu pháp tiếp xúc (LPTX)">
+                                <label for="contact_therapy">Liệu pháp tiếp xúc (LPTX)</label><br>
+                                <input type="checkbox" id="human_centered" name="method" value="Liệu pháp lấy con người làm trung tâm">
+                                <label for="human_centered">Liệu pháp lấy con người làm trung tâm</label><br>
+                            </div>
+                            
+                            <div id="gender_customer">
+                                <h3>Giới tính khách hàng ưu tiên</h3>
+                                <input type="checkbox" id="male" name="gender_customer" value="Nam">
+                                <label for="male">Nam</label><br>
+                                <input type="checkbox" id="female" name="gender_customer" value="Nữ">
+                                <label for="female">Nữ</label><br>
+                                <input type="checkbox" id="other" name="gender_customer" value="Khác">
+                                <label for="other">Khác</label><br>
+                            </div>
+                            
+                            <input type="text" id="age_customer" name="age_customer" placeholder="Nhóm tuổi khách hàng ưu tiên">
+                    <div id="button_container">
+                        <button onclick="register()">Đăng ký</button>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <script>
+                var provinces = [
+                    {text: "Đến Từ", value: ""},
+                    "An Giang", "Bà Rịa - Vũng Tàu", "Bắc Giang", "Bắc Kạn", "Bạc Liêu", "Bắc Ninh", "Bến Tre",
+                    "Bình Định", "Bình Dương", "Bình Phước", "Bình Thuận", "Cà Mau", "Cần Thơ", "Cao Bằng",
+                    "Đà Nẵng", "Đắk Lắk", "Đắk Nông", "Điện Biên", "Đồng Nai", "Đồng Tháp", "Gia Lai", "Hà Giang",
+                    "Hà Nam", "Hà Nội", "Hà Tĩnh", "Hải Dương", "Hải Phòng", "Hậu Giang", "Hòa Bình", "Hồ Chí Minh", "Hưng Yên",
+                    "Khánh Hòa", "Kiên Giang", "Kon Tum", "Lai Châu", "Lâm Đồng", "Lạng Sơn", "Lào Cai", "Long An",
+                    "Nam Định", "Nghệ An", "Ninh Bình", "Ninh Thuận", "Phú Thọ", "Phú Yên", "Quảng Bình", "Quảng Nam",
+                    "Quảng Ngãi", "Quảng Ninh", "Quảng Trị", "Sóc Trăng", "Sơn La", "Tây Ninh", "Thái Bình", "Thái Nguyên",
+                    "Thanh Hóa", "Thừa Thiên Huế", "Tiền Giang", "Trà Vinh", "Tuyên Quang", "Vĩnh Long", "Vĩnh Phúc",
+                    "Yên Bái", "Phú Yên"
+                ];
+                
+                var select = document.getElementById('position');
+                provinces.forEach(function(province) {
+                    var option = document.createElement('option');
+                    if (typeof province === 'object') {
+                        option.text = province.text;
+                        option.value = province.value;
+                        option.disabled = true;
+                        option.selected = true;
+                    } else {
+                        option.text = province;
+                        option.value = province;
+                    }
+                    select.add(option);
+                });
+                </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    </style>    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+         <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+         <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js"></script>
+         <script src="../js/firebase.js"></script>
+         <script src="/js/expertinfo.js"></script>
+
+</html>

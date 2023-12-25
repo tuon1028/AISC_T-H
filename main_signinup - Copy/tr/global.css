@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+.popup-overlay {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  inset: 0;
+}
+
+:root {
+  /* fonts */
+  --font-inria-sans: "Inria Sans";
+  --font-inter: Inter;
+  --font-lato: Lato;
+  --font-baloo-bhai-2: "Baloo Bhai 2";
+  --font-baloo-bhaina: "Baloo Bhaina";
+  --font-baloo-bhaina-2: "Baloo Bhaina 2";
+  --font-abel: Abel;
+  --font-lexend: Lexend;
+  --font-actor: Actor;
+  --font-baloo-bhaijaan-2: "Baloo Bhaijaan 2";
+  --font-maven-pro: "Maven Pro";
+  --font-maiden-orange: "Maiden Orange";
+  --font-roboto: Roboto;
+
+  /* font sizes */
+  --font-size-9xl: 28px;
+  --font-size-5xl: 24px;
+  --font-size-mid: 17px;
+  --font-size-3xs: 10px;
+  --font-size-17xl: 36px;
+  --font-size-11xl: 30px;
+  --font-size-base: 16px;
+  --font-size-2xs: 11px;
+  --font-size-xl: 20px;
+  --font-size-sm: 14px;
+  --font-size-xs: 12px;
+  --font-size-12xl: 31px;
+  --font-size-mini: 15px;
+  --font-size-45xl: 64px;
+  --font-size-15xl: 34px;
+  --font-size-lg: 18px;
+  --font-size-109xl: 128px;
+  --font-size-6xl: 25px;
+  --font-size-13xl: 32px;
+  --font-size-21xl: 40px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-coral-100: #f7794a;
+  --color-coral: #f26d34;
+  --color-ghostwhite: #f8faff;
+  --color-black: #000;
+  --color-snow: #fbf7f7;
+  --color-rosybrown: #996666;
+  --color-dimgray: #6c5e5e;
+  --color-darkgray-100: #a49f9f;
+  --color-darkgray: rgba(191, 170, 170, 0.5);
+  --color-steelblue: #6b82be;
+  --color-gray-100: #8f8f8f;
+  --color-gray-200: #837d7d;
+  --color-darkslategray: #03334b;
+  --color-skyblue-200: #9ccfeb;
+  --color-skyblue-400: rgba(156, 207, 235, 0);
+  --color-skyblue-300: rgba(156, 207, 235, 0.22);
+  --color-skyblue-100: rgba(156, 207, 235, 0.6);
+  --color-lightskyblue: #b2d1ff;
+  --color-aliceblue: #ecf2ff;
+  --color-lavenderblush: #f3e9e9;
+  --color-lightgray: #cfcfcf;
+  --color-gainsboro-100: #e5e5e5;
+  --color-gainsboro-200: #d9d9d9;
+  --color-gainsboro: #d8d8d8;
+  --color-silver-100: #cebdbd;
+  --color-lightblue: #c4e8fb;
+  --color-cornsilk: #fff4d2;
+  --color-thistle: #e5d1fa;
+
+  /* Gaps */
+  --gap-21xl: 40px;
+  --gap-3xs: 10px;
+  --gap-xs: 12px;
+  --gap-33xl: 52px;
+  --gap-23xl: 42px;
+  --gap-5xs: 8px;
+  --gap-7xl: 26px;
+  --gap-9xs: 4px;
+  --gap-sm: 14px;
+  --gap-smi: 13px;
+  --gap-2xs: 11px;
+  --gap-47xl: 66px;
+  --gap-7xs: 6px;
+  --gap-mini: 15px;
+  --gap-34xl: 53px;
+  --gap-10xl: 29px;
+  --gap-11xl: 30px;
+  --gap-281xl: 300px;
+  --gap-14xl: 33px;
+  --gap-13xl: 32px;
+  --gap-30xl: 49px;
+  --gap-xl: 20px;
+
+  /* Paddings */
+  --padding-6xs: 7px;
+  --padding-10xs: 3px;
+  --padding-xl: 20px;
+  --padding-smi: 13px;
+  --padding-sm: 14px;
+  --padding-3xs: 10px;
+  --padding-lg: 18px;
+  --padding-mid: 17px;
+  --padding-241xl: 260px;
+  --padding-91xl: 110px;
+  --padding-72xl: 91px;
+  --padding-10xl: 29px;
+  --padding-base: 16px;
+  --padding-7xs: 6px;
+  --padding-11xs: 2px;
+  --padding-9xs: 4px;
+  --padding-14xl: 33px;
+  --padding-225xl: 244px;
+  --padding-5xl: 24px;
+  --padding-mini: 15px;
+  --padding-13xl: 32px;
+  --padding-xs: 12px;
+  --padding-4xs: 9px;
+  --padding-8xl: 27px;
+  --padding-21xl: 40px;
+  --padding-7xl: 26px;
+  --padding-120xl: 139px;
+  --padding-8xs: 5px;
+  --padding-lgi: 19px;
+  --padding-2xl: 21px;
+  --padding-186xl: 205px;
+  --padding-58xl: 77px;
+  --padding-2xs: 11px;
+  --padding-16xl: 35px;
+  --padding-3xl: 22px;
+  --padding-24xl: 43px;
+  --padding-35xl: 54px;
+  --padding-33xl: 52px;
+
+  /* Border radiuses */
+  --br-25xl: 44px;
+  --br-6xs: 7px;
+  --br-mini: 15px;
+  --br-3xs: 10px;
+  --br-81xl: 100px;
+  --br-4xl: 23px;
+  --br-6xl: 25px;
+  --br-981xl: 1000px;
+  --br-17xl: 36px;
+  --br-4xs: 9px;
+  --br-xl: 20px;
+  --br-11xl: 30px;
+}

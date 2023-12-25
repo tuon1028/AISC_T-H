@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Tạo Tài Khoản </title>
+         <!-- Cool Google Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+        <!-- Our stylesheet -->
+        <link rel="stylesheet" type="text/css" href="/css/index.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+            <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+            
+
+    </head>
+    <body>
+        <div id="content_container">
+            <div id="form_container">
+                <div id="form_header_container">
+                    <h2 id="form_header"> Tạo Tài Khoản </h2>
+                </div>
+
+                <div id="form_content_container">
+                    <div id="form_content_inner_container">
+                        <input type="text" id="full_name" placeholder="Họ và Tên">
+                        <select id="gender">
+                            <option value="" disabled selected>Giới tính</option>
+                            <option value="Nam">Nam</option>
+                            <option value="Nữ">Nữ</option>
+                            <option value="Khác">Khác</option>
+                        </select>
+                        <input type="text" id="birthday" name="birthday" placeholder="Sinh Nhật">
+                        <select id="position" ></select>
+                        <input type="email" id="email" placeholder="Email">
+                        <input type="password" id="password" placeholder="Mật khẩu">
+                        <!-- Tạo một thẻ label để thay thế cho nút chọn tệp -->
+                        <label for="profile_picture" class="custom-file-upload">
+                            Chọn ảnh đại diện
+                        </label>
+                        <!-- Ẩn nút chọn tệp mặc định -->
+                        <input type="file" id="profile_picture" name="profile_picture" style="display: none;">
+                        <canvas id="image_canvas" style="width: 400px; height: 400px;"></canvas>
+                        <div id="button_container">
+                            <button onclick="login()">Đăng nhập</button>
+                            <button onclick="register()">Đăng ký</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <script>
+                var provinces = [
+                    {text: "Đến Từ", value: ""},
+                    "An Giang", "Bà Rịa - Vũng Tàu", "Bắc Giang", "Bắc Kạn", "Bạc Liêu", "Bắc Ninh", "Bến Tre",
+                    "Bình Định", "Bình Dương", "Bình Phước", "Bình Thuận", "Cà Mau", "Cần Thơ", "Cao Bằng",
+                    "Đà Nẵng", "Đắk Lắk", "Đắk Nông", "Điện Biên", "Đồng Nai", "Đồng Tháp", "Gia Lai", "Hà Giang",
+                    "Hà Nam", "Hà Nội", "Hà Tĩnh", "Hải Dương", "Hải Phòng", "Hậu Giang", "Hòa Bình", "Hồ Chí Minh", "Hưng Yên",
+                    "Khánh Hòa", "Kiên Giang", "Kon Tum", "Lai Châu", "Lâm Đồng", "Lạng Sơn", "Lào Cai", "Long An",
+                    "Nam Định", "Nghệ An", "Ninh Bình", "Ninh Thuận", "Phú Thọ", "Phú Yên", "Quảng Bình", "Quảng Nam",
+                    "Quảng Ngãi", "Quảng Ninh", "Quảng Trị", "Sóc Trăng", "Sơn La", "Tây Ninh", "Thái Bình", "Thái Nguyên",
+                    "Thanh Hóa", "Thừa Thiên Huế", "Tiền Giang", "Trà Vinh", "Tuyên Quang", "Vĩnh Long", "Vĩnh Phúc",
+                    "Yên Bái", "Phú Yên"
+                ];
+                
+                var select = document.getElementById('position');
+                provinces.forEach(function(province) {
+                    var option = document.createElement('option');
+                    if (typeof province === 'object') {
+                        option.text = province.text;
+                        option.value = province.value;
+                        option.disabled = true;
+                        option.selected = true;
+                    } else {
+                        option.text = province;
+                        option.value = province;
+                    }
+                    select.add(option);
+                });
+                </script>
+                
+
+                        <div id="button_container">
+                            <button onclick="login()">Đăng nhập</button>
+                            <button onclick="register()">Đăng ký</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+
+    <!-- Our script must be loaded after firebase references -->
+    <script src="/js/firebase.js"></script>
+    <script src="/js/index.js"></script>
+
+</html>

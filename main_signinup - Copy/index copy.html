@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria Sans:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Baloo Bhaina 2:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Baloo Bhaina:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Baloo Bhai 2:wght@400;800&display=swap"
+    />
+  </head>
+  <body>
+    <div class="trangcanhancg">
+      <div class="header">
+        <div class="bin-ha-4-2-wrapper">
+          <img class="bin-ha-4-2" alt="" src="./public/bin-ha-4-2@2x.png" />
+        </div>
+        <div class="header-inner">
+          <div class="frame-wrapper">
+            <input
+              class="frame-child"
+              placeholder="rối loạn, ..."
+              type="text"
+              height="{20}"
+            />
+          </div>
+        </div>
+        <div class="settings">
+          <button class="hin-ng-parent" id="groupButton">
+            <h6 class="hin-ng1" id="full_name"></h6>
+            <img
+              class="image-93-icon"
+              id="buttonsettings"
+              srcset
+              alt=""
+              src="./public/image-93@2x.png"
+            />
+          </button>
+        </div>
+      </div>
+      <div class="trang-c-nhn-nd">
+        <div class="frame-parent">
+          <div class="frame-group">
+            <div class="frame-container">
+              <div class="frame-div">
+                <button class="homepage-1-parent" id="frameButton">
+                  <img
+                    class="homepage-1-icon"
+                    alt=""
+                    src="./public/homepage-1@2x.png"
+                  />
+
+                  <div class="bn-tin">Bản tin</div>
+                </button>
+                <button class="book-1-parent">
+                  <img
+                    class="book-1-icon"
+                    alt=""
+                    src="./public/book-1@2x.png"
+                  />
+
+                  <div class="bn-tin">Kiến thức</div>
+                </button>
+                <button class="bell-1-parent">
+                  <img
+                    class="homepage-1-icon"
+                    alt=""
+                    src="./public/bell-1@2x.png"
+                  />
+
+                  <div class="thng-bo">Thông báo</div>
+                </button>
+                <div class="info-1-parent">
+                  <img
+                    class="homepage-1-icon"
+                    alt=""
+                    src="./public/info-1@2x.png"
+                  />
+
+                  <div class="v-432hz">Về 432Hz</div>
+                </div>
+              </div>
+            </div>
+            <div class="trang-c-nhn-chuyn-gia">
+              <div class="trang-c-nhn-chuyn-gia-inner">
+                <div class="trang-c-nhn-chuyn-gia-inner">
+                  <div class="frame-parent2">
+                    <img
+                      class="frame-item"
+                      srcset
+                      alt=""
+                      src="./public/frame-34@1x.png"
+                    />
+
+                    <img
+                      class="frame-inner"
+                      srcset
+                      alt=""
+                      src="./public/frame-35@1x.png"
+                    />
+
+                    <div class="hin-ng2">Hiền Ngô</div>
+                  </div>
+                  <div class="frame-wrapper1">
+                    <a class="image-13-parent">
+                      <img
+                        class="image-13-icon"
+                        alt=""
+                        src="./public/image-13@2x.png"
+                      />
+
+                      <b class="chnh-sa-trang">Chỉnh sửa trang cá nhân</b>
+                    </a>
+                  </div>
+                  <div class="frame-wrapper2">
+                    <div class="frame-parent3">
+                      <div class="gii-thiu-parent">
+                        <div class="gii-thiu">GIỚI THIỆU</div>
+                        <div class="gender-parent">
+                          <div class="gender">
+                            <h6 class="gii-tnh">Giới tính:</h6>
+                            <h6 id="gender"></h6>
+                            <img
+                              class="transgender-icon"
+                              alt=""
+                              src="./public/transgender@2x.png"
+                            />
+                          </div>
+                          <div class="bd">
+                            <img
+                              class="birthday-cake-icon"
+                              alt=""
+                              src="./public/birthday-cake@2x.png"
+                            />
+
+                            <div class="ngy-sinh">Ngày sinh:</div>
+                            <div class="div"><p id="birthday"></p></div>
+                          </div>
+                          <div class="email">
+                            <img
+                              class="birthday-cake-icon"
+                              alt=""
+                              src="./public/notebook-of-contacts@2x.png"
+                            />
+                          <div class="image-9-parent">
+                            <img
+                              class="birthday-cake-icon"
+                              alt=""
+                              src="./public/image-9@2x.png"
+                            />
+
+                            <div class="n-t">Đến từ:</div>
+                            <p id="position"></p>
+                          </div>
+                          <div class="frame-wrapper3">
+                            <div class="xem-thm-thng-tin-wrapper">
+                              <b class="xem-thm-thng"><button id="edit_profile">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-database-fill-gear" viewBox="0 0 16 16">
+                                    <path d="M8 1c-1.573 0-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4s.875 1.755 1.904 2.223C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777C13.125 5.755 14 5.007 14 4s-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1"/>
+                                    <path d="M2 7v-.839c.457.432 1.004.751 1.49.972C4.722 7.693 6.318 8 8 8s3.278-.307 4.51-.867c.486-.22 1.033-.54 1.49-.972V7c0 .424-.155.802-.411 1.133a4.51 4.51 0 0 0-4.815 1.843A12.31 12.31 0 0 1 8 10c-1.573 0-3.022-.289-4.096-.777C2.875 8.755 2 8.007 2 7m6.257 3.998L8 11c-1.682 0-3.278-.307-4.51-.867-.486-.22-1.033-.54-1.49-.972V10c0 1.007.875 1.755 1.904 2.223C4.978 12.711 6.427 13 8 13h.027a4.552 4.552 0 0 1 .23-2.002m-.002 3L8 14c-1.682 0-3.278-.307-4.51-.867-.486-.22-1.033-.54-1.49-.972V13c0 1.007.875 1.755 1.904 2.223C4.978 15.711 6.427 16 8 16c.536 0 1.058-.034 1.555-.097a4.507 4.507 0 0 1-1.3-1.905m3.631-4.538c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0"/>
+                                  </svg>
+                                Chỉnh sửa trang cá nhân
+                            </button> </b>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="frame-parent4">
+                        <div class="to-blog-wrapper">
+                          <div class="to-blog">TẠO BLOG</div>
+                        </div>
+                        <div class="blog-1-parent">
+                          <img
+                            class="blog-1-icon"
+                            alt=""
+                            src="./public/blog-1@2x.png"
+                          />
+
+                          <div class="thm-hnh-nh-wrapper">
+                            <div class="thm-hnh-nh">Thêm hình ảnh</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="frame-wrapper4">
+                    <div class="frame-child1"></div>
+                  </div>
+                  <div class="frame-child2"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="frame-child3"></div>
+          <div class="frame-parent5">
+            <div class="frame-parent6">
+              <div class="tiu-wrapper">
+                <div class="tiu">Tiêu đề</div>
+              </div>
+              <input class="frame-input" type="text" />
+            </div>
+            <div class="frame-parent7">
+              <div class="tiu-wrapper">
+                <div class="tiu">Nội dung</div>
+              </div>
+              <input class="frame-child4" type="text" />
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="container-inner">
+            <div class="bi-vit-2-parent">
+              <div class="bi-vit-2">
+                <div class="frame-parent8">
+                  <div class="image-93-parent">
+                    <img
+                      class="image-93-icon1"
+                      alt=""
+                      src="./public/image-93@2x.png"
+                    />
+
+                    <div class="tin-s-t">Tiến sĩ T. Brown</div>
+                  </div>
+                  <div class="frame-child5"></div>
+                  <div class="frame-child6"></div>
+                </div>
+                <div class="bi-vit-2-inner">
+                  <img
+                    class="frame-icon"
+                    srcset="chờ"
+                    alt=""
+                    src="./public/frame-88@1x.png"
+                  />
+                </div>
+                <div class="button-friendly-talk-wrapper">
+                  <button class="button-friendly-talk">
+                    <div class="friendly-talk">Friendly Talk</div>
+                  </button>
+                </div>
+                <article class="bi-vit-2-child"></article>
+              </div>
+              <div class="bi-vit-1">
+                <div class="frame">
+                  <div class="frame-parent9">
+                    <div class="image-93-parent">
+                      <img
+                        class="image-93-icon1"
+                        alt=""
+                        src="./public/image-93@2x.png"
+                      />
+
+                      <div class="tin-s-t">Tiến sĩ T. Brown</div>
+                    </div>
+                    <div class="frame-child5"></div>
+                    <div class="frame-child6"></div>
+                  </div>
+                  <div class="button-friendly-talk-container">
+                    <button class="button-friendly-talk">
+                      <div class="friendly-talk">Friendly Talk</div>
+                    </button>
+                  </div>
+                </div>
+                <div class="frame1">
+                  <article class="frame-article"></article>
+                  <div class="frame-inner1">
+                    <img
+                      class="frame-icon"
+                      srcset="chờ"
+                      alt=""
+                      src="./public/frame-881@1x.png"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="bi-vit-1">
+                <div class="frame">
+                  <div class="frame-parent9">
+                    <div class="image-93-parent">
+                      <img
+                        class="image-93-icon1"
+                        alt=""
+                        src="./public/image-93@2x.png"
+                      />
+
+                      <div class="tin-s-t">Tiến sĩ T. Brown</div>
+                    </div>
+                    <div class="frame-child5"></div>
+                    <div class="frame-child6"></div>
+                  </div>
+                  <div class="button-friendly-talk-container">
+                    <button class="button-friendly-talk">
+                      <div class="friendly-talk">Friendly Talk</div>
+                    </button>
+                  </div>
+                </div>
+                <div class="frame1">
+                  <article class="frame-article"></article>
+                  <div class="frame-inner1">
+                    <img
+                      class="frame-icon"
+                      srcset="chờ"
+                      alt=""
+                      src="./public/frame-881@1x.png"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="framePopup" class="popup-overlay" style="display: none">
+      <div class="see-your-profile-parent">
+        <div class="see-your-profile">
+          <div class="see-your-profile-child"></div>
+          <div class="hin-ng">Hiền Ngô</div>
+          <button class="see-your-profile1" id="seeprofile">
+            See your profile
+          </button>
+          <div class="see-your-profile-item"></div>
+        </div>
+        <div class="setting-and-privacy">
+          <div class="privacy-1-wrapper">
+            <img
+              class="privacy-1-icon"
+              alt=""
+              src="./public/privacy-1@2x.png"
+            />
+          </div>
+          <div class="chnh-sch-quyn">Chính sách quyền riêng tư</div>
+          <div class="xem">Xem</div>
+        </div>
+        <div class="log-out">
+          <div class="logout-1-wrapper">
+            <img class="logout-1-icon" alt="" src="./public/logout-1@2x.png" />
+          </div>
+          <div class="log-out1">Log out</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var image93Icon = document.getElementById("buttonsettings");
+      if (image93Icon) {
+        image93Icon.addEventListener("click", function () {
+          var popup = document.getElementById("framePopup");
+          if (!popup) return;
+          var popupStyle = popup.style;
+          if (popupStyle) {
+            popupStyle.display = "flex";
+            popupStyle.zIndex = 100;
+            popupStyle.backgroundColor = "rgba(112, 112, 112, 0)";
+            popupStyle.alignItems = "flex-end";
+            popupStyle.justifyContent = "";
+          }
+          popup.setAttribute("closable", "");
+      
+          var onClick =
+            popup.onClick ||
+            function (e) {
+              if (e.target === popup && popup.hasAttribute("closable")) {
+                popupStyle.display = "none";
+              }
+            };
+          popup.addEventListener("click", onClick);
+        });
+      }
+      
+      var groupButton = document.getElementById("groupButton");
+      if (groupButton) {
+        groupButton.addEventListener("click", function () {
+          var popup = document.getElementById("framePopup");
+          if (!popup) return;
+          var popupStyle = popup.style;
+          if (popupStyle) {
+            popupStyle.display = "flex";
+            popupStyle.zIndex = 100;
+            popupStyle.backgroundColor = "rgba(112, 112, 112, 0)";
+            popupStyle.alignItems = "flex-end";
+            popupStyle.justifyContent = "";
+          }
+          popup.setAttribute("closable", "");
+      
+          var onClick =
+            popup.onClick ||
+            function (e) {
+              if (e.target === popup && popup.hasAttribute("closable")) {
+                popupStyle.display = "none";
+              }
+            };
+          popup.addEventListener("click", onClick);
+        });
+      }
+      
+      var frameButton = document.getElementById("frameButton");
+      if (frameButton) {
+        frameButton.addEventListener("click", function (e) {
+          // Please sync "homepage" to the project
+        });
+      }
+      </script>
+  </body>
+</html>

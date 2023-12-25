@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Tạo Tài Khoản </title>
+         <!-- Cool Google Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+        <!-- Our stylesheet -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+            <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
+            
+
+    </head>
+    <body>
+        <div id="content_container">
+            <div id="form_container">
+                <div id="form_header_container">
+                    <h2 id="form_header"> Cập Nhật Thông Tin </h2>
+                </div>
+                <div id="form_content_container">
+                    <div id="form_content_inner_container">
+                        <div class="section">
+                            <h3 style="color: white;">Information to Sign In</h3>
+                            <input type="email" id="email" readonly>
+                            <div class="input-container">
+                                <input type="password" id="current_password" placeholder="Mật khẩu hiện tại">
+                                <button class="btn btn-outline-secondary" type="button" id="toggle-password-visibility-current">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash-fill" viewBox="0 0 16 16">
+                                        <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588M5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z"/>
+                                        <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12z"/>
+                                        </svg>
+                                </button>
+                            </div>
+                            <div class="input-container">
+                                <input type="password" id="new_password" placeholder="Mật khẩu mới">
+                                <button class="btn btn-outline-secondary" type="button" id="toggle-password-visibility-new">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash-fill" viewBox="0 0 16 16">
+                                        <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588M5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z"/>
+                                        <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="input-container">
+                                <input type="password" id="confirm_password" placeholder="Xác nhận mật khẩu mới">
+                                <button class="btn btn-outline-secondary" type="button" id="toggle-password-visibility-confirm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash-fill" viewBox="0 0 16 16">
+                                        <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588M5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z"/>
+                                        <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <button onclick="changePassword()">Thay đổi mật khẩu</button>
+                        </div>
+                        <div class="section">
+                            <h3 style="color: white;">Public Information</h3>
+                            <input type="text" id="full_name" placeholder="Họ và Tên">
+                            <select id="gender">
+                                <option value="" disabled selected>Giới tính</option>
+                                <option value="Nam">Nam</option>
+                                <option value="Nữ">Nữ</option>
+                                <option value="Khác">Khác</option>
+                            </select>
+                            <input type="text" id="birthday" name="birthday" placeholder="Sinh Nhật">
+                            <select id="position" ></select>
+                        </div>
+                        <div id="button_container">
+                            <button onclick="save()">Cập nhật</button>
+                            <button onclick="revert()">Hoàn tác</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const togglePasswordVisibility = (inputId, buttonId) => {
+                const inputElement = document.querySelector(inputId);
+                const buttonElement = document.querySelector(buttonId);
+
+                buttonElement.addEventListener('click', function() {
+                    const currentType = inputElement.getAttribute('type');
+                    inputElement.setAttribute('type', currentType === 'password' ? 'text' : 'password');
+                });
+            }
+
+            togglePasswordVisibility('#current_password', '#toggle-password-visibility-current');
+            togglePasswordVisibility('#new_password', '#toggle-password-visibility-new');
+            togglePasswordVisibility('#confirm_password', '#toggle-password-visibility-confirm');
+
+        </script>
+        <script>
+        var provinces = [
+            {text: "Đến Từ", value: ""},
+            "An Giang", "Bà Rịa - Vũng Tàu", "Bắc Giang", "Bắc Kạn", "Bạc Liêu", "Bắc Ninh", "Bến Tre",
+            "Bình Định", "Bình Dương", "Bình Phước", "Bình Thuận", "Cà Mau", "Cần Thơ", "Cao Bằng",
+            "Đà Nẵng", "Đắk Lắk", "Đắk Nông", "Điện Biên", "Đồng Nai", "Đồng Tháp", "Gia Lai", "Hà Giang",
+            "Hà Nam", "Hà Nội", "Hà Tĩnh", "Hải Dương", "Hải Phòng", "Hậu Giang", "Hòa Bình", "Hồ Chí Minh", "Hưng Yên",
+            "Khánh Hòa", "Kiên Giang", "Kon Tum", "Lai Châu", "Lâm Đồng", "Lạng Sơn", "Lào Cai", "Long An",
+            "Nam Định", "Nghệ An", "Ninh Bình", "Ninh Thuận", "Phú Thọ", "Phú Yên", "Quảng Bình", "Quảng Nam",
+            "Quảng Ngãi", "Quảng Ninh", "Quảng Trị", "Sóc Trăng", "Sơn La", "Tây Ninh", "Thái Bình", "Thái Nguyên",
+            "Thanh Hóa", "Thừa Thiên Huế", "Tiền Giang", "Trà Vinh", "Tuyên Quang", "Vĩnh Long", "Vĩnh Phúc",
+            "Yên Bái", "Phú Yên"
+        ];
+        
+        var select = document.getElementById('position');
+        provinces.forEach(function(province) {
+            var option = document.createElement('option');
+            if (typeof province === 'object') {
+                option.text = province.text;
+                option.value = province.value;
+                option.disabled = true;
+                option.selected = true;
+            } else {
+                option.text = province;
+                option.value = province;
+            }
+            select.add(option);
+        });
+        </script>
+    </body>
+    
+    
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+
+    <!-- Our script must be loaded after firebase references -->
+    <script src="../js/firebase.js"></script>
+    <script src="/js/edit_userinfo.js"></script>
+
+</html>
+
+<style>
+    html, body {
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(25deg, #a08743, #FB5607, #FF006E, #8338EC, #3A86FF);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+#content_container {
+    width: 90%; /* Adjusted width */
+    height: 90%; /* Adjusted height */
+}
+#form_container {
+    width: 100%;
+    height: 100%;
+    background-color: #370617;
+    box-shadow: 0 0 50px -20px #000;
+    border-radius: 2%;
+    overflow: auto; /* Added scrollbar */
+}
+#form_header_container {
+    width: 100%;
+    height: 10%; /* Adjusted height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    padding: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border-bottom: 1px solid transparent;
+    border-image: -webkit-linear-gradient(25deg, #FFBE0B, #FB5607, #FF006E, #8338EC, #3A86FF) 20;
+    background: #000;
+}
+#form_header {
+    display: inline-block;
+    font-size: 15px;
+    font-family: Bowlby One SC;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: -webkit-linear-gradient(25deg, #FFBE0B, #FB5607, #FF006E, #8338EC, #3A86FF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+#form_content_container {
+    width: 100%;
+    height: 80%; /* Adjusted height */
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+#form_content_inner_container {
+    width: 75%;
+    height: 100%;
+    float: left;
+}
+#button_container {
+    width: 100%;
+    height: 10%; /* Adjusted height */
+    background-image: linear-gradient(80deg, #FFBE0B, #FB5607 50%, #FF006E 50%, #8338EC);
+    color: #fff;
+    float: left;
+    margin-top: 5px;
+}
+
+#button_container button {
+    width: 50%;
+    height: 100%;
+    float: left;
+    background: transparent;
+    color: inherit;
+    font-family: Montserrat;
+    letter-spacing: 1px;
+    font-weight: 900;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+select, input {
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    background: #000;
+    font-family: Montserrat;
+    font-weight: 500;
+    color: #fff;
+    font-size: 12px;
+    border-bottom: 2px solid transparent;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+    border-image: -webkit-linear-gradient(25deg, #FFBE0B, #FB5607, #FF006E, #8338EC, #3A86FF) 1;
+}
+/* Định dạng cho thẻ label để giống với nút chọn tệp */
+.custom-file-upload {
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    color: #495057;
+}
+.section {
+    border: 1px solid #fffbfb;
+    margin-bottom: 20px;
+    padding: 10px;
+      }
+.input-container {
+    position: relative;
+    width: 100%;
+}
+
+.input-container input {
+    width: 90%;
+}
+
+.input-container button {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+
+</style>      
+
+<html>
